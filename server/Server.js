@@ -4,7 +4,9 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const userRoutes= require('./routes/userRoute');
 const eventRoutes= require('./routes/eventRoute');
-app.listen(5000,()=>{
+
+const port = process.env.PORT || 3000;
+app.listen(port, "0.0.0.0",()=>{
     console.log('Server is running on port 5000');
 })
 app.use(express.static('public'));
