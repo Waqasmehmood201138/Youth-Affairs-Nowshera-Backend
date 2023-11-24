@@ -27,4 +27,7 @@ const connection = mongoose.connection;
     app.use(express.json());
     app.use('/api/user',userRoutes)
     app.use('/events',eventRoutes)
+    app.get('/', (req, res) => {
+        res.send('Hello from the backend!'); // Replace with your desired response or rendering logic
+    });
 
